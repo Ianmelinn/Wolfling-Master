@@ -39,12 +39,10 @@ public class CameraControl : MonoBehaviour
         // Gather mouse inputs
         float rotate = Input.GetAxis("Mouse X") * mouseSensitivity.x * -1; // -1 inverts mouse control - remove if you don't want it
         float panUp = Input.GetAxis("Mouse Y") * mouseSensitivity.y * -1;
-        float zoom = Input.mouseScrollDelta.y;
 
         // Update state variables
         phi += rotate;
         theta += panUp;
-        distance += zoom;
 
         // Clamp variable values
         distance = Mathf.Max(0, distance);
